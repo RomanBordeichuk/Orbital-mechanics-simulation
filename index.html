@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Orbital Mechanics</title>
+</head>
+<body>
+    <div class="info_block">
+        <div class="info_label label" onclick="showObjectsInfo()">
+            <h3>Parameters</h3>
+        </div>
+        <div class="info_block_list block">
+            
+        </div>
+    </div>
+    <div class="controls">
+        <div class="controls_head" onclick="showControlsBlock()">
+            <h3>Controls</h3>
+        </div>
+        <div class="controls_block">
+            <div class="controls_label">
+                <div class="setObjConfig" onclick="showObjectsConfig()">
+                    <span>Set objects configuration</span>
+                </div>
+                <div class="setRandConfig" onclick="showRandConfig()">
+                    <span>Set random configuration</span>
+                </div>
+                <div class="create_object" onclick="showCreateObjBlock()">
+                    <span>Create new object</span>
+                </div>
+                <div class="delete_object" onclick="showDeleteObjBlock()">
+                    <span>Delete object</span>
+                </div>
+                <div class="restart">
+                    <button onclick="changeRunning()">Update simulation</button>
+                </div>
+                <div class="reset">
+                    <button onclick="resetRunning()">Reset to basic settings</button>
+                </div>
+            </div>
+            <div class="options_block">
+                <div class="setObjConfig_block">
+
+                </div>
+                <div class="setRandConfig_block">
+                    <h3>Random configuration parameters</h3>
+                    <div>
+                        <div class="objects_options">
+                            <div class="divMass"><span>Mass value: </span>
+                                <input type="text"></div>
+                            <div class="divMassDiap"><span>Mass diapazone: </span>
+                                <input type="text"></div>
+                            <hr>
+                            <div class="divDirection"><span>Direction value: </span>
+                                <input type="text"></div>
+                            <div class="divDirectionDiap"><span>Direction diapazone: </span>
+                                <input type="text"></div>
+                            <hr>
+                            <div class="divSpeed"><span>Speed value: </span>
+                                <input type="text"></div>
+                            <div class="divSpeedDiap"><span>Speed diapazone: </span>
+                                <input type="text"></div>
+                        </div>
+                        <div class="area_options">
+                            <div class="divNumObjects"><span>Number of objects: </span>
+                                <input type="text"></div>
+                            <hr>
+                            <div class="divAreaX"><span>Area X: </span>
+                                <input type="text"></div>
+                            <div class="divAreaY"><span>Area Y: </span>
+                                <input type="text"></div>
+                            <div class="divAreaRadius"><span>Area radius: </span>
+                                <input type="text"></div>
+                        </div>
+                    </div>
+                    <button onclick="createRandomConfig()">Create random configuration</button>
+                </div>
+                <div class="createObject_block">
+                    <div>
+                        <h3>New object's configuration</h3>
+                        <span class="spanMass">Mass: <input type="text"></span>
+                        <span class="spanX">X: <input type="text"></span>
+                        <span class="spanY">Y: <input type="text"></span>
+                        <span class="spanDirection">Direction: <input type="text"></span>
+                        <span class="spanSpeed">Speed: <input type="text"></span>
+                    </div>
+                    <button onclick="createObject()">Create</button>
+                </div>
+                <div class="deleteObject_block">
+                    <div class="deleteObject_block_head">Delete object</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyRights">
+        <span>© Roman Bordeichuk, March 2023</span>
+    </div>
+    <div class="obj_area">
+        
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+body{
+    background: black;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.label{
+    background: grey;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.1s;
+}
+h3{
+    margin: 0;
+}
+
+/********** INFO BLOCK **********/
+
+.info_block{
+    position: fixed;
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+    opacity: 0.7;
+    width: 250px;
+    cursor: pointer;
+}
+.info_label:active{
+    filter: brightness(1.5);
+}
+.info_block_list{
+    max-height: 330px;
+    padding-right: 10px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.info_block_list::-webkit-scrollbar{
+    background: grey;
+    border-radius: 10px;
+}
+.object_info{
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s;
+}
+.object_info:active{
+    filter: brightness(1.5);
+}
+.object_info > span{
+    display: none;
+}
+.object_info > .spanId{
+    display: block;
+}
+
+/********** CONTROLS **********/
+
+.controls{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    opacity: 0.7;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.controls *{
+    box-sizing: border-box;
+}
+.controls_head{
+    width: 250px;
+    background: grey;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.1s;
+}
+.controls_head:active{
+    filter: brightness(1.5);
+}
+.controls_block{
+    border-radius: 10px;
+    transition: 0.1s;
+    margin-top: 10px;
+    display: none;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+.controls_block .controls_label > div{
+    width: 250px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align: center;
+    background: grey;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+.setObjConfig, .setRandConfig, .create_object, .delete_object{
+    padding: 10px 20px;
+}
+.controls_block .controls_label > div:active{
+    filter: brightness(1.5);
+}
+.setObjConfig_block{
+    max-height: 330px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+.setObjConfig_block::-webkit-scrollbar{
+    background: grey;
+    border-radius: 10px;
+}
+.object_config{
+    background: gray;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+.object_config > span{
+    font-weight: bold;
+    margin: 2px 0;
+    display: flex;
+}
+.object_config > span input{
+    width: 100%;
+    font-weight: bold;
+    background: transparent;
+    border: 0;
+}
+.options_block{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+.options_block button{
+    background: grey;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.controls_block button{
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: grey;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.options_block button:active{
+    filter: brightness(1.5);
+}
+.createObject_block{
+    background: grey;
+    border-radius: 10px;
+    margin-left: 10px;
+    display: none;
+}
+.createObject_block > div{
+    padding: 10px 20px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.createObject_block h3{
+    text-align: center;
+}
+.createObject_block span{
+    display: flex;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.createObject_block input{
+    width: 100%;
+    font-weight: bold;
+    background: gray;
+    border: 0;
+}
+.createObject_block button{
+    width: 100%;
+    border-top: 5px solid black;
+    border-radius: 0 0 10px 10px;
+}
+.deleteObject_block{
+    width: 250px;
+    max-height: 330px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+    flex-direction: column;
+}
+.deleteObject_block::-webkit-scrollbar{
+    background: grey;
+    border-radius: 0 10px 10px 0;
+}
+.deleteObject_block div{
+    display: block;
+    background: gray;
+    border-top: 5px solid black;
+    padding: 10px 20px 10px 10px;
+    margin-right: 5px;
+    transition: 0.1s;
+}
+.deleteObject_block div:active{
+    filter: brightness(1.5);
+}
+.deleteObject_block_head{
+    font-size: 18px;
+}
+.deleteObject_block .deleteObject_block_head{
+    border-top: 0;
+}
+.deleteObject_block .deleteObject_block_head:active{
+    filter: brightness(1);
+}
+.setRandConfig_block{
+    background: grey;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    display: none;
+    flex-direction: column;
+    font-weight: bold;
+}
+.setRandConfig_block h3{
+    padding-bottom: 10px;
+}
+.setRandConfig_block > div{
+    display: flex;
+}
+.setRandConfig_block > div > div{
+    display: flex;
+    flex-direction: column;
+}
+.objects_options{
+    border-right: 5px solid black;
+    margin-right: 10px;
+    padding-right: 5px;
+}
+.objects_options div, .area_options div{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2px 0;
+}
+.setRandConfig_block span{
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+.setRandConfig_block input{
+    width: 100%;
+    border: 0;
+    background: grey;
+    font-weight: bold;
+}
+.setRandConfig_block hr{
+    opacity: 0;
+}
+
+.copyRights{
+    position: fixed;
+    z-index: 1;
+    right: 10px;
+    bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/********** SPACE **********/
+
+.obj_area{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.circle{
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
+.line{
+    background: white;
+    height: 2px;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 1;
+}
+.point{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
