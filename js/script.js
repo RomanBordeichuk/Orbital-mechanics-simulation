@@ -21,6 +21,7 @@ const space = document.querySelector(".obj_area");
 space.style.width = spaceWidth + "px";
 space.style.height = spaceHeight + "px";
 
+const noteSpace = document.querySelector(".noteSpace");
 const objectListInfo = document.querySelector(".info_block_list");
 const controlsBlock = document.querySelector(".controls_block");
 const objOptionsBlock = document.querySelector(".options_block");
@@ -323,10 +324,14 @@ document.addEventListener("keydown", (event) => {
             if(!isRunning){
                 start();
                 isRunning = true;
+
+                noteSpace.innerText = "Press Space to pause";
             }
             else{
                 stop();
                 isRunning = false;
+
+                noteSpace.innerText = "Press Space to start";
             }
         }
         else run();

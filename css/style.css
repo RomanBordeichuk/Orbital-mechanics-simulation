@@ -18,6 +18,16 @@ h3{
 
 /********** INFO BLOCK **********/
 
+.noteSpace{
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
 .info_block{
     position: fixed;
     z-index: 2;
